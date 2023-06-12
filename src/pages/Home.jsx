@@ -15,8 +15,13 @@ import Services from '../services/Services';
 import Clock from '../components/UI/Clock';
 
 import counterImg from '../assets/images/counter-timer-img.png';
-
 import useGetData from '../custom-hooks/useGetData';
+
+import sliderImg1 from '../assets/images/slider-image1.jpg';
+import sliderImg2 from '../assets/images/slider-image2.jpg';
+import sliderImg3 from '../assets/images/slider-image3.jpg';
+
+import { Carousel } from "react-bootstrap";
 
 const Home = () => {
 
@@ -81,6 +86,62 @@ const Home = () => {
           }
         </Row>
       </Container>
+    </section>
+
+    <section>
+      <div className='carousel-container'>
+        <Container>
+          <Row>
+          <Col lg='12' className='text-center'>
+            <h2 className='section__title'>Featured Gallery</h2>
+          </Col>
+    <Carousel interval={2000}>
+    <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={sliderImg3}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>Master Sofa Set I</h3>
+      <p>"Absolutely love the sofa set! It has completely transformed my living room into a cozy and stylish space."
+        <br />
+        -Maham Arshad
+      </p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={sliderImg1}
+      alt="Second slide"
+    />
+    <Carousel.Caption>
+      <h3>Master Sofa Set II</h3>
+      <p>"The cushions are incredibly comfortable, and the upholstery feels luxurious to the touch. The design is modern and sleek, making it a perfect fit for my contemporary decor."
+        <br />
+        -Zainab Kashif
+      </p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={sliderImg2}
+      alt="Third slide"
+    />
+    <Carousel.Caption>
+      <h3>Master Sofa Set III</h3>
+      <p>"The quality is outstanding, and I can tell it's built to last. I highly recommend this sofa set to anyone looking for both comfort and style!"
+        <br />
+        -Alayna Khalid
+      </p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
+</Row>
+</Container>
+</div>
     </section>
 
     <section className="best__sales">

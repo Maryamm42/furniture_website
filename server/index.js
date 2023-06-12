@@ -48,13 +48,14 @@ app.post("/api/create-checkout", async (req, res) => {
       line_items: [
         {
           price: priceId,
-          quantity: quantity,
+          quantity: 1,
         },
       ],
       mode: "payment",
-      success_url: `${YOUR_DOMAIN_URL}/success`,
-      cancel_url: `${YOUR_DOMAIN_URL}/cancel`,
+      success_url: `http://localhost:3000/CheckOutSuccess`,
+      cancel_url: `http://localhost:3000/Failure`,
     });
+    
 
     res.json({ sessionId: session.id });
   } catch (error) {

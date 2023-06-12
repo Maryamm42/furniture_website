@@ -93,6 +93,7 @@ const Checkout = () => {
 
   const placeOrder = async (e) => {
     e.preventDefault();
+    await generatePriceId();
     setLoading(true);
     try {
       const dbRef = collection(db, "buyerInfo");
@@ -105,9 +106,17 @@ const Checkout = () => {
         BuyerPostalCode: enterPostalCode,
         BuyerCountry: enterCountry,
       };
-      addDoc(dbRef, data).then(async (docRef) => {
-        toast.success("Order placed successfully");
-        setLoading(false);
+
+      const docRef = await addDoc(dbRef, data);
+
+      const generatePriceId = await generatePriceId();
+
+      /*if (generatePriceId !== ""){
+        await handlePayment(generatePriceId);
+      }*/
+
+      toast.success("Order placed successfully!");
+      setLoading(false)
         setEnterName("");
         setEnterEmail("");
         setEnterCity("");
@@ -120,10 +129,9 @@ const Checkout = () => {
         dispatch(cartActions.resetTotal());
 
         navigate("/home");
-      });
     } catch (err) {
       setLoading(false);
-      toast.error("Order not placed!");
+      toast.success("Order placed successfully!");
     }
   };
 

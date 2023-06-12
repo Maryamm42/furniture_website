@@ -82,12 +82,17 @@ const Footer = () => {
 
               <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
               <span><i class="ri-mail-line"></i></span>
-              <p>maryaamkhanzada@gmail.com</p>
+              <p>maryaamkhanzada@gmail.com
+                <br />
+                alizasuhail@gmail.com
+                <br />
+                rafiashakil@gmail.com
+              </p>
               </ListGroupItem>
             </ListGroup>
           </div></Col>
           <Col lg='12'>
-            <p className="footer__copyright">Copyright {year} developed by Maryam Khalid Khanzada. All rights reserved.</p>
+            <p className="footer__copyright">Copyright {year} developed by Maryam Khalid Khanzada, Aliza Suhail and Rafia Shakil All rights reserved.</p>
           </Col>
 
       </Row>
