@@ -8,6 +8,7 @@ import Checkout from "../pages/Checkout";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import ProtectedRoute from "./ProtectedRoute";
+import Adminlogin from "../pages/Adminlogin";
 
 import AddProducts from "../admin/AddProducts";
 import AllProducts from "../admin/AllProducts";
@@ -37,6 +38,7 @@ const Routers = () => {
 
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<Signup />} />
+      <Route path="Adminlogin" element={<Adminlogin/>}/>
     </Routes>
   );
 };

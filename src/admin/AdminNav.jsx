@@ -21,10 +21,6 @@ const admin__nav =[
     {
         display:'Users',
         path:'/dashboard/users'
-    },
-    {
-        display:'Home',
-        path: '/home'
     }
 ]
 
@@ -38,7 +34,7 @@ const AdminNav = () => {
         <Container>
             <div className='admin__nav-wrapper-top'>
                 <div className="logo">
-                    <h2>Multimart</h2>
+                    <h2>Future Gallery</h2>
                 </div>
                 <div className="search__box">
                     <input type="text" placeholder='Search....' />

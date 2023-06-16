@@ -7,8 +7,7 @@ const Dashboard = () => {
 
   const {data: products} = useGetData('products');
   
-  const {data: users} = useGetData('users')
-
+  const {data: users} = useGetData('users');
 
   return <>
   <section>

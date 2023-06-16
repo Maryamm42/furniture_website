@@ -28,10 +28,6 @@ const nav__links =[
   {
     path: 'cart',
     display: 'Cart'
-  }, 
-  {
-    path: '/dashboard',
-    display: 'Dashboard'
   }
 ];
 const Header = () => {
@@ -113,7 +109,7 @@ const Header = () => {
               currentUser ? <span onClick={logout}>Logout</span> : <div className='d-flex align-items-center jusify-content-center flex-column'>
                 <Link to='/signup'>Signup</Link>
                 <Link to='/login'>Login</Link>
-                <Link to='/dashboard'>Dashboard</Link>
+                <Link to='/Adminlogin'>Admin</Link>
               </div>
             }
           </div>
